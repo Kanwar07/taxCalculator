@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tax Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/styles.css" />
+  </head>
+  <body>
+    <form id="myform">
+      <h2>Tax Calculator</h2>
+      <label for="annualincome">
+        Enter gross annual income<span class="tooltip"
+          ><img
+            src="../assets/fyi.png"
+            alt="fyi"
+            style="margin-top: -4rem"
+          /><span class="tooltiptext"
+            >Gross annual income is your total salary in a year before any
+            deductions</span
+          ></span
+        >
+        <br />
+        <input
+          type="text"
+          id="annualincome"
+          placeholder="Enter gross annual income"
+          required
+        />
+        <span class="error-icon" id="errorIcon1">!</span>
+        <div class="tooltiperror" id="tooltiperror1">Not a number</div>
+      </label>
+      <br />
+      <label for="extraincome">
+        Enter extra income<span class="tooltip"
+          ><img src="../assets/fyi.png" alt="fyi" /><span class="tooltiptext"
+            >Extra income is your additional income apart from your gross annual
+            income</span
+          ></span
+        >
+        <br />
+        <input type="text" id="extraincome" placeholder="Enter extra income" />
+        <span class="error-icon" id="errorIcon1">!</span>
+        <div class="tooltiperror" id="tooltiperror1">Not a number</div>
+      </label>
+      <br />
+      <label for="age">
+        Enter age group<span class="tooltip"
+          ><img src="../assets/fyi.png" alt="fyi" /><span class="tooltiptext"
+            >Age range you belong</span
+          ></span
+        >
+        <br />
+        <select id="age" required>
+          <option value="" selected>Select your age range</option>
+          <option value="below40">Below 40</option>
+          <option value="between40&60">Between 40 & 60</option>
+          <option value="above60">Above 60</option>
+        </select>
+      </label>
+      <br />
+      <label for="deductions">
+        Enter total applicable deductions<span class="tooltip"
+          ><img src="../assets/fyi.png" alt="fyi" /><span class="tooltiptext"
+            >Amount that need to be deducted from total income</span
+          ></span
+        >
+        <br />
+        <input
+          type="text"
+          id="deductions"
+          placeholder="Enter total applicable deductions"
+        />
+        <span class="error-icon" id="errorIcon1">!</span>
+        <div class="tooltiperror" id="tooltiperror1">Not a number</div>
+      </label>
+      <br />
+      <button type="submit" class="button-submit" id="submitBtn">Submit</button>
+    </form>
+    <script src="../javascript/script.js"></script>
+  </body>
+</html>
